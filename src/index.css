@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+
+.works{
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente fila cuando no haya suficiente espacio horizontal */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  max-width: 1000px; /* Define el ancho máximo que deseas para el contenedor */
+  margin: 0 auto;
+}
+
+/* ListadoTrabajos.css */
+
+.work-item {
+  border-radius: solid 1px;
+  margin: 10px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  width: 200px; 
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.work-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 9s ease;
+}
+.work-item:hover {
+  transform: perspective(250px)
+  rotateX(10deg);
+  transform: scale(1.1); /* Puedes ajustar la escala según tus preferencias */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+}
+
+.tags {
+  margin-top: 5px;
+}
+
+.tag {
+  background-color: grey;
+  color: white;
+  padding: 3px 3px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+/* Ajusta el tamaño de la máscara (por ejemplo, 200px x 200px) */
+.mask img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto ajustará la imagen sin distorsionarla */
+}
+
+/* Añade la propiedad object-fit para la imagen */
+@media (max-width: 768px) {
+  /* Cuando la pantalla sea más estrecha que 768px, cambia la dirección de flexbox a vertical */
+  .works {
+    flex-direction: column;
+  }
+}
+
+.page{
+  margin: 70px;
+}
+
+.heading {
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-top: 50px; /* Añade margen superior para centrar verticalmente */
+  position: relative; /* Establece la posición relativa para el título */
+}
+
+.heading::after {
+  content: ''; /* Agrega contenido después del título */
+  display: block; /* Convierte el contenido en un bloque */
+  width: 50px; /* Ancho de la línea */
+  height: 2px; /* Altura de la línea */
+  background-color: gray; /* Color de la línea */
+  margin: 10px auto 0; /* Margen superior para separar la línea del texto */
+}
+
+
+
+
+
+
